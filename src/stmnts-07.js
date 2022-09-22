@@ -56,9 +56,9 @@ function invertBoolean(bool) {
  */
 function numberOfOdds(num) {
   let counter = 0;
-  for (let i = 0; i < num; i++) {
+  for (let i = 0; i < num; i += 1) {
     if (i % 2 !== 0) {
-      counter++;
+      counter += 1;
     }
   }
   return counter;
@@ -75,7 +75,7 @@ function numberOfOdds(num) {
  */
 function addUpTheNumbers(num) {
   let sum = 0;
-  for (let i = 0; i <= num; i++) {
+  for (let i = 0; i <= num; i += 1) {
     sum += i;
   }
   return sum;
@@ -99,15 +99,14 @@ function addUpTheNumbers(num) {
 function gradeGenerator(score) {
   if (score < 60) {
     return 'F'
-  } else if (score < 70) {
+  } if (score < 70) {
     return 'D'
-  } else if (score < 80) {
+  } if (score < 80) {
     return 'C'
-  } else if (score < 90) {
+  } if (score < 90) {
     return 'B'
-  } else {
-    return 'A'
   }
+  return 'A'
 }
 
 /**
@@ -130,9 +129,9 @@ function getGrade(name, score) {
   const letterGrade = gradeGenerator(score);
   if (letterGrade === 'A' || letterGrade === "F") {
     return `${name} got an ${letterGrade}`;
-  } else {
-    return `${name} got a ${letterGrade}`;
   }
+  return `${name} got a ${letterGrade}`;
+
 }
 
 module.exports = {
